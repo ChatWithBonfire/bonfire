@@ -1,1 +1,2 @@
-"# bonfire" 
+# Bonfire
+The reimagined chat app
