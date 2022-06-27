@@ -1,2 +1,2 @@
 # Bonfire
-The reimagined chat app
+A chat app reimagined
