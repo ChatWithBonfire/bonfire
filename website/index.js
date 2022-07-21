@@ -24,7 +24,7 @@ const addMessage = (message) => {
 };
 
 const createGuild = (guild) => {
-  document.getElementById("sidebar").innerHTML += `
+    document.getElementById("sidebar").innerHTML += `
     <br>
     <div>
     <div class="bg-discord-400 flex items-center justify-center group w-12 h-12 rounded-full hover:bg-discord-200 hover:rounded-2xl transition-all">
@@ -39,14 +39,13 @@ form.onsubmit = (event) => {
     event.preventDefault();
     const username = "SAM_SOONG";
     const text = textbox.value;
-    if (text.trim() === "") {
-        return;
-    }
-    else {
-        const newTime = new Date();
-        const time = `${newTime.getHours()}:${newTime.getMinutes()}`;
-        const newMessage = { text, username, time };
-        addMessage(newMessage);
-    }
+    const newTime = new Date();
+    const time = new Date().toLocaleString(navigator.languages[0], {
+        hour: "numeric",
+        minute: "numeric",
+        hour12: true
+      });
+    const newMessage = { text, username, time };
+    addMessage(newMessage);
     textbox.value = "";
 };

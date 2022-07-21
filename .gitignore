@@ -1,0 +1,5 @@
+.env
+discord.json
+db.json
+test.js
+node_modules
